@@ -25,24 +25,30 @@ public class Mains {
                         System.out.print("Please provide a correct input");
                     }
                 }
-                System.out.print("What is your pet's age: ");
-                int age = Integer.parseInt(userInput.nextLine());
-                if ((age > 30) || (age < 0)) {
-                    break;
-                } else {
-                    System.out.print("Please provide a correct input");
+                int age = 0; 
+                while(true){
+                    System.out.print("What is your pet's age: ");
+                    age = Integer.parseInt(userInput.nextLine());
+                    if (age < 30 && age > 0) {
+                        break;
+                    } else {
+                        System.out.print("Please provide a correct input");
+                    }
                 }
 
                 System.out.print("What is your pet's name? ");
                 String petN = userInput.nextLine().toLowerCase();
                 System.out.print("What is your lucky number? ");
                 int lucky = Integer.parseInt(userInput.nextLine());
-                System.out.print("Do you have a favorate quarter back? ");
-                String quarter = userInput.nextLine().toLowerCase();
-                if (quarter.equals("yes") || quarter.equals("no")) {
-                    break;
-                } else {
-                    System.out.print("Please provide a correct input");
+                String quarter = " ";
+                while(true){
+                    System.out.print("Do you have a favorate quarter back? ");
+                    quarter = userInput.nextLine().toLowerCase();
+                    if (quarter.equals("yes") || quarter.equals("no")) {
+                        break;
+                    } else {
+                        System.out.print("Please provide a correct input");
+                    }
                 }
                 int quarterNumber = 0;
                 if (quarter.equals("yes")) {
@@ -53,12 +59,15 @@ public class Mains {
                 int model = Integer.parseInt(userInput.nextLine());
                 System.out.print("What is the first name of your favorite actor or actress? ");
                 String actor = userInput.nextLine().toLowerCase();
-                System.out.print("Please enter any random number between 1 and 50: ");
-                int rnd = Integer.parseInt(userInput.nextLine());
-                if ((rnd > 50) || (rnd < 0)) {
-                    break;
-                } else {
-                    System.out.print("Please provide a correct input");
+                int rnd = 0;
+                while(true){
+                    System.out.print("Please enter any random number between 1 and 50: ");
+                    rnd = Integer.parseInt(userInput.nextLine());
+                    if ((rnd < 50) || (rnd > 0)) {
+                        break;
+                    } else {
+                        System.out.print("Please provide a correct input");
+                    }
                 }
                 Random rand = new Random();
 
